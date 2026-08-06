@@ -1,0 +1,231 @@
+[gd_scene format=3 uid="uid://78ojlclolkd5"]
+
+[ext_resource type="Script" uid="uid://d2mlt0ry5q0xc" path="res://calculator.gd" id="1_0fbet"]
+[ext_resource type="AudioStream" uid="uid://btvm0ptsrbp5f" path="res://sfx/67-sound-effect.mp3" id="2_62e2m"]
+[ext_resource type="Script" uid="uid://bt36tt4gi6nrv" path="res://sym_equals.gd" id="3_qtu10"]
+
+[sub_resource type="SystemFont" id="SystemFont_yvsha"]
+
+[node name="Control" type="Control" unique_id=589744165]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 508.43396
+offset_bottom = 448.88
+script = ExtResource("1_0fbet")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1516070883]
+stream = ExtResource("2_62e2m")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1405208464]
+layout_mode = 0
+offset_right = 574.0
+offset_bottom = 727.0
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1563686728]
+custom_minimum_size = Vector2(560, 640)
+custom_maximum_size = Vector2(566, 640)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=927312227]
+custom_minimum_size = Vector2(0, 75)
+custom_maximum_size = Vector2(-1, 75)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_yvsha")
+theme_override_font_sizes/font_size = 42
+text = "1337"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=1854587988]
+custom_minimum_size = Vector2(574, 648)
+custom_maximum_size = Vector2(574, 648)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+columns = 4
+
+[node name="SymDelete" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1038165353]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = "<-"
+script = ExtResource("3_qtu10")
+
+[node name="SymClear" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1286737433]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = "CE"
+script = ExtResource("3_qtu10")
+
+[node name="SymClearAll" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=2124586685]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = "AC"
+script = ExtResource("3_qtu10")
+
+[node name="SymDivide" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=697171769]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = " ÷ "
+script = ExtResource("3_qtu10")
+
+[node name="Num7" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=158056919]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = " 7 "
+script = ExtResource("3_qtu10")
+
+[node name="Num8" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1474388130]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = " 8 "
+script = ExtResource("3_qtu10")
+
+[node name="Num9" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=520478274]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = " 9 "
+script = ExtResource("3_qtu10")
+
+[node name="SymMultiply" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1229193660]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = " * "
+script = ExtResource("3_qtu10")
+
+[node name="Num4" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=824537516]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = " 4 "
+script = ExtResource("3_qtu10")
+
+[node name="Num5" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=323758595]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = " 5 "
+script = ExtResource("3_qtu10")
+
+[node name="Num6" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1154600056]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = " 6 "
+script = ExtResource("3_qtu10")
+
+[node name="SymSubtract" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1083621281]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = " - "
+script = ExtResource("3_qtu10")
+
+[node name="Num1" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=863164878]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = " 1 "
+script = ExtResource("3_qtu10")
+
+[node name="Num2" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=2077368569]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = " 2 "
+script = ExtResource("3_qtu10")
+
+[node name="Num3" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=496576977]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = " 3 "
+script = ExtResource("3_qtu10")
+
+[node name="SymPlus" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=806091108]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = " + "
+script = ExtResource("3_qtu10")
+
+[node name="SymRevNum" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1819203054]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = "+/-"
+script = ExtResource("3_qtu10")
+
+[node name="Num0" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1787981448]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = "0"
+script = ExtResource("3_qtu10")
+
+[node name="SymDecimal" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1686485498]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = "."
+script = ExtResource("3_qtu10")
+
+[node name="SymEquals" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=968983827]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = "="
+script = ExtResource("3_qtu10")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/SymDelete" to="." method="_on_sym_pressed" binds= ["<-"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/SymClear" to="." method="_on_sym_pressed" binds= ["CE"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/SymClearAll" to="." method="_on_sym_pressed" binds= ["AC"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/SymDivide" to="." method="_on_sym_pressed" binds= ["÷"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Num7" to="." method="_on_num_pressed" binds= [7]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Num8" to="." method="_on_num_pressed" binds= [8]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Num9" to="." method="_on_num_pressed" binds= [9]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/SymMultiply" to="." method="_on_sym_pressed" binds= ["*"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Num4" to="." method="_on_num_pressed" binds= [4]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Num5" to="." method="_on_num_pressed" binds= [5]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Num6" to="." method="_on_num_pressed" binds= [6]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/SymSubtract" to="." method="_on_sym_pressed" binds= ["-"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Num1" to="." method="_on_num_pressed" binds= [1]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Num2" to="." method="_on_num_pressed" binds= [2]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Num3" to="." method="_on_num_pressed" binds= [3]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/SymPlus" to="." method="_on_sym_pressed" binds= ["+"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/SymRevNum" to="." method="_on_sym_pressed" binds= ["+/-"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Num0" to="." method="_on_num_pressed" binds= [0]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/SymDecimal" to="." method="_on_sym_pressed" binds= ["."]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/SymEquals" to="." method="_on_sym_pressed" binds= ["="]]
