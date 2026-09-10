@@ -19,13 +19,13 @@ Available at https://miceoroni.github.io/UnhingedCalculator/unhinged_calc.html
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/miceoroni/UnhingedCalculator.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd UnhingedCalculator
 ```
 
 Build using godot
